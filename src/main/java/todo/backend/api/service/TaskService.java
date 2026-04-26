@@ -51,7 +51,7 @@ public class TaskService {
     public Task editTask(Long id,Task task2){
         Task task = getTaskById(id);
         task.setTitle(task2.getTitle());
-        task.setDescription(task.getDescription());
+        task.setDescription(task2.getDescription());
         String insertedPriority = String.valueOf(task2.getPriority());
         task.setPriority(checkPriority(insertedPriority));
         String insertedDate = String.valueOf(task2.getDueDate());
